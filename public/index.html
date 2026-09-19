@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EncurtaJá — Encurtador de Links</title>
+  <meta name="description" content="Encurte seus links de forma rápida e simples.">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <div class="badge">LINK SHORTENER • V1</div>
+      <h1>Encurte seus links.</h1>
+      <p>Transforme links grandes em URLs curtas e fáceis de compartilhar.</p>
+
+      <form id="shortenForm" class="form">
+        <input id="urlInput" type="url" placeholder="https://exemplo.com/seu-link" autocomplete="url" required>
+        <button type="submit" id="submitButton">Encurtar</button>
+      </form>
+
+      <div id="message" class="message hidden"></div>
+
+      <div id="result" class="result hidden">
+        <span>Seu link curto</span>
+        <div class="result-row">
+          <a id="shortUrl" href="#" target="_blank" rel="noopener"></a>
+          <button id="copyButton" type="button">Copiar</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="section-title">
+        <div>
+          <span class="eyebrow">SEUS LINKS</span>
+          <h2>Links criados</h2>
+        </div>
+        <button id="refreshButton" class="secondary" type="button">Atualizar</button>
+      </div>
+
+      <div id="linksList" class="links-list">
+        <div class="empty">Nenhum link criado ainda.</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
